@@ -5,7 +5,8 @@ import { Switch, Link, Route } from 'react-router-dom';
 import { Typography, Space, Layout, Avatar } from 'antd'
 
 import { Navbar, Homepage, Crytocurrencies, Crypto, Exchanges, News } from './components/components';
-import reactLogo from './images/react-logo.png'
+import reactLogo from './images/react-2.svg'
+import reduxLogo from './images/redux_Logo.png'
 const App = () => {
   return (
     <div className="app">
@@ -37,7 +38,7 @@ const App = () => {
         <div className='footer'>
           <Typography.Title level={5} style={{ textAlign: 'center', color: '#fff' }}>
             Crypto Tracker <br />
-            Made with <Avatar src={reactLogo} size='default' style={{ position: 'relative', top: '-2px' }} /> by <a href='https://github.com/dhananjayjaiswal16'>DJ</a>
+            <span>Made with <Avatar src={reactLogo} size='default' style={{ position: 'relative', top: '-8px' }} /> and <Avatar src={reduxLogo} size='default' style={{ position: 'relative', top: '-7px' }} /> by <a href='https://github.com/dhananjayjaiswal16'>DJ</a></span>
 
           </Typography.Title>
           <Space>
