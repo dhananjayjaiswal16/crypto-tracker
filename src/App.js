@@ -4,7 +4,7 @@ import './App.css';
 import { Switch, Link, Route } from 'react-router-dom';
 import { Typography, Space, Layout, Avatar } from 'antd'
 
-import { Navbar, Homepage, Crytocurrencies, Crypto, Exchanges, News } from './components/components';
+import { Navbar, Homepage, Cryptocurrencies, Crypto, Exchanges, News } from './components/components';
 import reactLogo from './images/react-2.svg'
 import reduxLogo from './images/redux_Logo.png'
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
                 <Homepage />
               </Route>
               <Route exact path='/cryptocurrencies'>
-                <Crytocurrencies />
+                <Cryptocurrencies />
               </Route>
               <Route exact path='/crypto/coin:id'>
                 <Crypto />
