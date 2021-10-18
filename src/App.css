@@ -42,6 +42,11 @@
 .logo {
   margin: 0 0 0 15px;
 }
+.headerText {
+  font-size: 25px;
+  position: relative;
+  bottom: -9px;
+}
 .logo a {
   color: white;
 }
@@ -76,4 +81,32 @@
 .search-crypto {
   margin: 20px auto 30px auto;
   width: 250px;
+}
+
+.news-card {
+  min-height: 300px !important;
+}
+
+.news-image-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.news-title {
+  width: 70%;
+}
+.news-image-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.news-card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+.provider-container {
+  display: flex;
+  justify-content: space-between;
+}
+.provider-name {
+  margin-left: 10px;
 }

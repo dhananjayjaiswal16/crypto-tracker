@@ -7,9 +7,9 @@ const Navbar = () => {
     return (
         <div className='navContainer'>
             <div className='logoContainer'>
-                <Avatar src={image} size='large' style={{ height: '70px', width: '70px' }} />
+                <Avatar src={image} size='large' style={{ height: '40px', width: '40px' }} />
                 <Typography.Title className='logo' level={2}>
-                    <Link to='/'>Crypto Tracker</Link>
+                    <Link to='/' className='headerText'>Crypto Tracker</Link>
                 </Typography.Title>
             </div>
             <Menu theme='dark'>
