@@ -31,7 +31,7 @@ const Cryptocurrencies = ({ simplified }) => {
                     <Col className='crypto-card' xs={24} sm={12} md={8} lg={6} key={coin?.id}>
                         <Link to={`/crypto/${coin?.id}`}>
                             <Card title={`${coin?.rank}) ${coin?.name}`} extra={<img src={coin?.iconUrl} className='crypto-image' />} hoverable>
-                                <p>Price: {millify(coin?.price)}</p>
+                                <p>Price: ${millify(coin?.price)}</p>
                                 <p>Market Cap: {millify(coin?.marketCap)}</p>
                                 <p>Daily Change: {millify(coin?.change)}%</p>
                                 <p>Circulating Supply: {coin?.circulatingSupply && millify(coin?.circulatingSupply)}</p>
