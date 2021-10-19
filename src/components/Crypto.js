@@ -5,7 +5,7 @@ import millify from 'millify';
 
 import { Col, Row, Typography, Select } from 'antd';
 
-import { useGetCryptoDetailQuery } from '../sevices/cryptoApi'
+import { useGetCryptoDetailQuery, useGetCryptoHistoryQuery } from '../sevices/cryptoApi';
 
 import Chart from './Charts';
 
@@ -18,12 +18,12 @@ const Crypto = () => {
     const { coinId } = useParams();
     const [timePeriod, setTimePeriod] = useState('24h');
     const { data, isFetching } = useGetCryptoDetailQuery(coinId);
-
+    const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod });
     const cryptoDetails = data?.data?.coin;
 
     if (isFetching) return 'Loading...';
 
-    const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
+    const time = ['3h', '24h', '7d', '30d', '1y', '5y'];
 
     const stats = [
         { title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`, icon: <DollarCircleOutlined /> },
