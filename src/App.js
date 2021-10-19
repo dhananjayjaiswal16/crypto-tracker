@@ -9,7 +9,7 @@ import reactLogo from './images/react-2.svg'
 import reduxLogo from './images/redux_Logo.png'
 const App = () => {
   return (
-    <div className="app">
+    <div className='app'>
       <div className='navbar'>
         <Navbar />
       </div>
@@ -23,7 +23,7 @@ const App = () => {
               <Route exact path='/cryptocurrencies'>
                 <Cryptocurrencies />
               </Route>
-              <Route exact path='/crypto/coin:id'>
+              <Route exact path='/crypto/:coinId'>
                 <Crypto />
               </Route>
               <Route exact path='/exchanges'>
