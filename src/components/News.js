@@ -28,7 +28,7 @@ const News = ({ simplified }) => {
 
         <>
             {!simplified && (
-                <Col class='news-filter'>
+                <Col className='news-filter'>
                     <Select
                         className='select-news'
                         showSearch
