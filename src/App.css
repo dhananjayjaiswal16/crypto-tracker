@@ -68,7 +68,7 @@ a:hover {
   border: none !important;
 }
 .loader {
-  height: 81vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,8 +304,12 @@ a:hover {
 .news-title {
   width: 70%;
 }
-
-.news-image-container .img {
+.news-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.news-image-container img {
   width: 100px;
   height: 100px;
 }

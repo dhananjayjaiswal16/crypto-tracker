@@ -4,6 +4,8 @@ import { useGetCryptosQuery } from '../sevices/cryptoApi';
 import { Select, Typography, Card, Row, Col, Avatar } from 'antd';
 import newsImg from '../images/crypto-news-img.jpeg';
 import moment from 'moment';
+import Loader from './Loader';
+
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -18,7 +20,7 @@ const News = ({ simplified }) => {
     const { data: cryptoNewsData } = useGetCryptoNewsQuery({ newsCategory, count });
 
 
-
+    if (!cryptoNewsData?.value) return <Loader />
     // console.log("cryptoNewsData", cryptoNewsData);
 
 
@@ -26,7 +28,7 @@ const News = ({ simplified }) => {
 
         <>
             {!simplified && (
-                <Col>
+                <Col class='news-filter'>
                     <Select
                         className='select-news'
                         showSearch

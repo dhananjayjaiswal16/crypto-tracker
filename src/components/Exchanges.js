@@ -2,6 +2,7 @@ import React from 'react';
 import { useGetExchangesQuery } from '../sevices/cryptoApi';
 import HTMLReactParser from 'html-react-parser';
 import millify from 'millify';
+import Loader from './Loader';
 import { Row, Col, Collapse, Typography, Avatar } from 'antd'
 
 const { Panel } = Collapse;
@@ -10,7 +11,7 @@ const Exchanges = () => {
 
     const { data: exchangesData, isFetching } = useGetExchangesQuery();
 
-    if (isFetching) return 'Loading...';
+    if (isFetching) return <Loader />;
     const exchanges = exchangesData?.data?.exchanges;
     return (
         <>
