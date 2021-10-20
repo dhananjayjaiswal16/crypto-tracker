@@ -38,7 +38,7 @@ const App = () => {
         <div className='footer'>
           <Typography.Title level={5} style={{ textAlign: 'center', color: '#fff' }}>
             Crypto Tracker <br />
-            <span>Made with <Avatar src={reactLogo} size='default' style={{ position: 'relative', top: '-8px' }} /> and <Avatar src={reduxLogo} size='default' style={{ position: 'relative', top: '-7px' }} /> by <a href='https://github.com/dhananjayjaiswal16'>DJ</a></span>
+            <span>Made with <Avatar src={reactLogo} size='default' /> and <Avatar src={reduxLogo} size='default' /> by <a href='https://github.com/dhananjayjaiswal16'>DJ</a></span>
 
           </Typography.Title>
           <Space>

@@ -30,8 +30,8 @@ const Navbar = () => {
     return (
         <div className='nav-container'>
             <div className='logo-container'>
-                <Avatar src={image} size='large' style={{ height: '40px', width: '40px' }} />
-                <Typography.Title className='logo' level={2}>
+                <Avatar src={image} size='large' style={{ height: '35px', width: '35px' }} />
+                <Typography.Title className='logo' level={3}>
                     <Link to='/'>Crypto Tracker</Link>
                 </Typography.Title>
                 <Button
