@@ -31,7 +31,7 @@ const Exchanges = () => {
                                     <Col span={6}>
                                         <Text>{exchange?.rank}</Text>
                                         <Avatar className='exchange-image' src={exchange?.iconUrl}></Avatar>
-                                        <Text>{exchange?.name}</Text>
+                                        <Text className='exchange-name'>{exchange?.name}</Text>
                                     </Col>
                                     <Col span={6}>{millify(exchange?.volume)}</Col>
                                     <Col span={6}>{exchange?.numberOfMarkets}</Col>
