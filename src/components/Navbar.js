@@ -27,6 +27,11 @@ const Navbar = () => {
         }
     }, [screenSize]);
 
+    const hamClose = () => (
+        screenSize <= 800 ? setActiveMenu(!activeMenu) : setActiveMenu(activeMenu)
+    )
+
+
     return (
         <div className='nav-container'>
             <div className='logo-container'>
@@ -43,16 +48,16 @@ const Navbar = () => {
             </div>
             {activeMenu && (
                 <Menu theme='dark'>
-                    <Menu.Item icon={<HomeOutlined />} onClick={() => setActiveMenu(!activeMenu)}>
+                    <Menu.Item icon={<HomeOutlined />} onClick={hamClose}>
                         <Link to='/'>Home</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<FundOutlined />} onClick={() => setActiveMenu(!activeMenu)}>
+                    <Menu.Item icon={<FundOutlined />} onClick={hamClose}>
                         <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<MoneyCollectOutlined />} onClick={() => setActiveMenu(!activeMenu)}>
+                    <Menu.Item icon={<MoneyCollectOutlined />} onClick={hamClose}>
                         <Link to='/exchanges'>Crypto Exchanges</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<BulbOutlined />} onClick={() => setActiveMenu(!activeMenu)}>
+                    <Menu.Item icon={<BulbOutlined />} onClick={hamClose}>
                         <Link to='/news'>News</Link>
                     </Menu.Item>
                 </Menu>
